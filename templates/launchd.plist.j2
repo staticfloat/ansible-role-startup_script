@@ -14,8 +14,13 @@
         <key>UserName</key>
         <string>{{user}}</string>
         <key>StandardOutPath</key>
-        <string>/var/log/{{service_name}}.log</string>
+        <string>/tmp/{{service_name}}.log</string>
         <key>StandardErrorPath</key>
-        <string>/var/log/{{service_name}}.log</string>
+        <string>/tmp/{{service_name}}.log</string>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string>/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin</string>
+        </dict>
     </dict>
 </plist>
