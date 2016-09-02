@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>KeepAlive</key> <true/>
+        <key>Label</key> <string>com.staticfloat.{{service_name}}</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>{{daemon_name}}</string>
+            {{daemon_opts}}
+        </array>
+        <key>WorkingDirectory</key>
+        <string>{{chdir}}</string>
+    </dict>
+</plist>
