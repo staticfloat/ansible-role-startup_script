@@ -6,8 +6,12 @@
         <key>Label</key> <string>com.staticfloat.{{service_name}}</string>
         <key>ProgramArguments</key>
         <array>
-            <string>{{daemon_name}}</string>
-            {{daemon_opts}}
+            <string>/usr/bin/sudo</string>
+            <string>-u</string>
+            <string>{{user}}</string>
+            <string>/bin/bash</string>
+            <string>-c</string>
+            <string>{{script_setup}} {{daemon_name}} {{daemon_opts}}</string>
         </array>
         <key>WorkingDirectory</key>
         <string>{{chdir}}</string>
